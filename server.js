@@ -1,22 +1,14 @@
-var express = require('express');
-var hbs = require('hbs');
-var fs = require('fs');
-var app = express();
-
+const express = require('express');
+const hbs = require('hbs');
+const fs = require('fs');
+const app = express();
+const port = process.env.PORT || 3000;
 //hbs--declare partial
 hbs.registerPartials(__dirname + '/views/partials');
 
 //app.set()
 //set view engine
 app.set('view engine','hbs');
-
-//to confugure middleware use 'app.use()'
-//path: root folder/public folder 
-//public folder any file that not private 
-//files like js,html,css,images etc
-//files will be served when requested by hostname://serverListeningport/filename
-//to provide static routes for all files residing in public folder
-//helps to avoid making custom routes for each files we want to server
 
 //middleware --that will logs our request url 
 app.use(function(req,res,next){
@@ -100,6 +92,6 @@ app.get('/home',function(req,res){
         errorMessage:'Bad Request 2'
     });
   });
-app.listen(3000,function(msg){
-    console.log('Server is up ......on port 3000.');
+app.listen(port,function(msg){
+    console.log(`Server is up ......on port ${port}`);
 });
