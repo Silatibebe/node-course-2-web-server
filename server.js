@@ -66,8 +66,8 @@ app.get('/',function(req,res){
     // res.send('<h1>About Page</h1>'); 
 
     res.render('about.hbs',{
-        pageTitle:'About Page '//passing data to dynamically render in hbs page
-        
+        pageTitle:'About Page ',//passing data to dynamically render in hbs page
+        welcomeMessage:'A description about this website.'
     });//render template we set in the view engine
   });
 
@@ -82,9 +82,12 @@ app.get('/home',function(req,res){
     });//render template we set in the view engine
   });
 
-   //  '/contact' route
- app.get('/contact',function(req,res){
-    res.send('<h1>Contact Us</h1>');
+   //  '/projects' route
+ app.get('/projects',function(req,res){
+    res.render('Projects.hbs',{
+        pageTitle:'Projects Page',
+        welcomeMessage:'Welcome to My project'
+    });
   });
 
     //  '/order' route
