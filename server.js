@@ -45,11 +45,19 @@ app.get('/',function(req,res){
 
     // res.send('<h1>Hello Express</h1>');
     //sending object --express will handles all transformation into a json data 
-    res.send({
-        name:'Hana',
-        likes:['reading bible','praying','singing church songs']
+    // res.send({
+    //     name:'Hana',
+    //     likes:['reading bible','praying','singing church songs']
+        
 
-    });
+    // });
+
+    res.render('home.hbs',{
+        pageTitle:'Home page',//passing data to dynamically render in hbs page
+        welcomeMessage:'Welcome to Website.'
+      
+    });//render template we set in the view engine
+    
    
 });//end-root route 
 
