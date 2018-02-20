@@ -85,7 +85,7 @@ app.get('/home',function(req,res){
    //  '/projects' route
  app.get('/myprojects',function(req,res){
     res.render('myprojects.hbs',{
-        pageTitle:'Projects Page',
+        pageTitle:'My Projects Page',
         welcomeMessage:'Welcome to My project'
     });
   });
