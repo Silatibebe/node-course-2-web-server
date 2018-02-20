@@ -83,7 +83,7 @@ app.get('/home',function(req,res){
   });
 
    //  '/projects' route
- app.get('/myprojects',function(req,res){
+ app.get('/myProjects2',function(req,res){
     res.render('myprojects.hbs',{
         pageTitle:'My Projects Page',
         welcomeMessage:'Welcome to My project'
